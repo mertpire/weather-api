@@ -26,12 +26,6 @@ This project is a simple weather API that fetches and returns weather data from 
    ```sh
    npm install
    ```
-3. Create a `.env` file and add your environment variables:
-   ```sh
-   WEATHER_API_KEY=your_weather_api_key
-   REDIS_URL=redis://localhost:6379
-   APP_PORT=3000
-   ```
 4. Start the server:
    ```sh
    npm start
@@ -40,16 +34,6 @@ This project is a simple weather API that fetches and returns weather data from 
 #### Example Request
 
 ```sh
-curl http://localhost:3000/weather/London
+curl http://localhost:3000/weather/mersin
 ```
-
-## Caching Strategy
-
-- The city code is used as the Redis key.
-- Weather data is cached for 12 hours.
-- If cached data exists, the API serves it instead of making an external request.
-
-## Rate Limiting
-
-- Implemented using `express-rate-limit` to limit the number of requests per minute.
 
